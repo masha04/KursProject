@@ -44,28 +44,28 @@
             this.btnReportProv = new System.Windows.Forms.Button();
             this.btnReportMerch = new System.Windows.Forms.Button();
             this.gBStorage = new System.Windows.Forms.GroupBox();
-            this.btnZakMerch = new System.Windows.Forms.Button();
-            this.btnPerMerch = new System.Windows.Forms.Button();
-            this.cbChooseBranch = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.myDataBaseDataSet = new myProgram.MyDataBaseDataSet();
-            this.storageBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.storageTableAdapter = new myProgram.MyDataBaseDataSetTableAdapters.StorageTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.branchIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menchIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.storageBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.myDataBaseDataSet = new myProgram.MyDataBaseDataSet();
+            this.btnZakMerch = new System.Windows.Forms.Button();
+            this.btnPerMerch = new System.Windows.Forms.Button();
+            this.cbChooseBranch = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.storageTableAdapter = new myProgram.MyDataBaseDataSetTableAdapters.StorageTableAdapter();
             this.gBImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEmblem)).BeginInit();
             this.gBmanag.SuspendLayout();
             this.gBReport.SuspendLayout();
             this.gBStorage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myDataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myDataBaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // gBImage
@@ -219,43 +219,6 @@
             this.gBStorage.TabIndex = 3;
             this.gBStorage.TabStop = false;
             // 
-            // btnZakMerch
-            // 
-            this.btnZakMerch.Location = new System.Drawing.Point(494, 497);
-            this.btnZakMerch.Name = "btnZakMerch";
-            this.btnZakMerch.Size = new System.Drawing.Size(163, 23);
-            this.btnZakMerch.TabIndex = 3;
-            this.btnZakMerch.Text = "Заказать товар";
-            this.btnZakMerch.UseVisualStyleBackColor = true;
-            // 
-            // btnPerMerch
-            // 
-            this.btnPerMerch.Location = new System.Drawing.Point(304, 497);
-            this.btnPerMerch.Name = "btnPerMerch";
-            this.btnPerMerch.Size = new System.Drawing.Size(184, 23);
-            this.btnPerMerch.TabIndex = 2;
-            this.btnPerMerch.Text = "Перераспределить товар";
-            this.btnPerMerch.UseVisualStyleBackColor = true;
-            // 
-            // cbChooseBranch
-            // 
-            this.cbChooseBranch.FormattingEnabled = true;
-            this.cbChooseBranch.Location = new System.Drawing.Point(197, 19);
-            this.cbChooseBranch.Name = "cbChooseBranch";
-            this.cbChooseBranch.Size = new System.Drawing.Size(166, 21);
-            this.cbChooseBranch.TabIndex = 1;
-            this.cbChooseBranch.Text = "Выберите филиал";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(7, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(184, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Наличие товара на складе";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -276,20 +239,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(651, 445);
             this.dataGridView1.TabIndex = 4;
-            // 
-            // myDataBaseDataSet
-            // 
-            this.myDataBaseDataSet.DataSetName = "MyDataBaseDataSet";
-            this.myDataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // storageBindingSource
-            // 
-            this.storageBindingSource.DataMember = "Storage";
-            this.storageBindingSource.DataSource = this.myDataBaseDataSet;
-            // 
-            // storageTableAdapter
-            // 
-            this.storageTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -333,6 +282,57 @@
             this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
             this.stateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // storageBindingSource
+            // 
+            this.storageBindingSource.DataMember = "Storage";
+            this.storageBindingSource.DataSource = this.myDataBaseDataSet;
+            // 
+            // myDataBaseDataSet
+            // 
+            this.myDataBaseDataSet.DataSetName = "MyDataBaseDataSet";
+            this.myDataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnZakMerch
+            // 
+            this.btnZakMerch.Location = new System.Drawing.Point(494, 497);
+            this.btnZakMerch.Name = "btnZakMerch";
+            this.btnZakMerch.Size = new System.Drawing.Size(163, 23);
+            this.btnZakMerch.TabIndex = 3;
+            this.btnZakMerch.Text = "Заказать товар";
+            this.btnZakMerch.UseVisualStyleBackColor = true;
+            // 
+            // btnPerMerch
+            // 
+            this.btnPerMerch.Location = new System.Drawing.Point(304, 497);
+            this.btnPerMerch.Name = "btnPerMerch";
+            this.btnPerMerch.Size = new System.Drawing.Size(184, 23);
+            this.btnPerMerch.TabIndex = 2;
+            this.btnPerMerch.Text = "Перераспределить товар";
+            this.btnPerMerch.UseVisualStyleBackColor = true;;
+            // 
+            // cbChooseBranch
+            // 
+            this.cbChooseBranch.FormattingEnabled = true;
+            this.cbChooseBranch.Location = new System.Drawing.Point(197, 19);
+            this.cbChooseBranch.Name = "cbChooseBranch";
+            this.cbChooseBranch.Size = new System.Drawing.Size(166, 21);
+            this.cbChooseBranch.TabIndex = 1;
+            this.cbChooseBranch.Text = "Выберите филиал";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(7, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(184, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Наличие товара на складе";
+            // 
+            // storageTableAdapter
+            // 
+            this.storageTableAdapter.ClearBeforeFill = true;
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -353,8 +353,8 @@
             this.gBStorage.ResumeLayout(false);
             this.gBStorage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myDataBaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myDataBaseDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

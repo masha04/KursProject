@@ -34,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="OpenPop, Version=2.0.5.0, Culture=neutral, PublicKeyToken=bebb5741791313cd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\OpenPop.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -107,6 +111,7 @@
     <Compile Include="Forms\MerchandiseForm.Designer.cs">
       <DependentUpon>MerchandiseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mail.cs" />
     <Compile Include="MyDataBaseDataSet.cs">
       <DependentUpon>MyDataBaseDataSet.xsd</DependentUpon>
       <SubType>Component</SubType>
