@@ -46,7 +46,6 @@
             this.gBStorage = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnZakMerch = new System.Windows.Forms.Button();
-            this.btnPerMerch = new System.Windows.Forms.Button();
             this.cbChooseBranch = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.storageBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -208,7 +207,6 @@
             this.gBStorage.Controls.Add(this.btnPereraspMerch);
             this.gBStorage.Controls.Add(this.dataGridView1);
             this.gBStorage.Controls.Add(this.btnZakMerch);
-            this.gBStorage.Controls.Add(this.btnPerMerch);
             this.gBStorage.Controls.Add(this.cbChooseBranch);
             this.gBStorage.Controls.Add(this.label2);
             this.gBStorage.Location = new System.Drawing.Point(223, 2);
@@ -237,13 +235,6 @@
             this.btnZakMerch.TabIndex = 3;
             this.btnZakMerch.Text = "Заказать товар";
             this.btnZakMerch.UseVisualStyleBackColor = true;
-            // 
-            // btnPerMerch
-            // 
-            this.btnPerMerch.Location = new System.Drawing.Point(0, 0);
-            this.btnPerMerch.Name = "btnPerMerch";
-            this.btnPerMerch.Size = new System.Drawing.Size(75, 23);
-            this.btnPerMerch.TabIndex = 5;
             // 
             // cbChooseBranch
             // 
@@ -341,7 +332,6 @@
         private System.Windows.Forms.Button btnReportMerch;
         private System.Windows.Forms.GroupBox gBStorage;
         private System.Windows.Forms.Button btnZakMerch;
-        private System.Windows.Forms.Button btnPerMerch;
         private System.Windows.Forms.ComboBox cbChooseBranch;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;

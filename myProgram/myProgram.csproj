@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="OpenPop, Version=2.0.5.0, Culture=neutral, PublicKeyToken=bebb5741791313cd, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\OpenPop.dll</HintPath>
@@ -111,7 +114,7 @@
     <Compile Include="Forms\MerchandiseForm.Designer.cs">
       <DependentUpon>MerchandiseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mail.cs" />
+    <Compile Include="Classes\Mail.cs" />
     <Compile Include="MyDataBaseDataSet.cs">
       <DependentUpon>MyDataBaseDataSet.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -129,10 +132,10 @@
     <Compile Include="Forms\ProvisionerForm.Designer.cs">
       <DependentUpon>ProvisionerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SaleBranch.cs">
+    <Compile Include="Forms\SaleBranch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SaleBranch.Designer.cs">
+    <Compile Include="Forms\SaleBranch.Designer.cs">
       <DependentUpon>SaleBranch.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\AddMerchandiseForm.resx">
@@ -177,7 +180,7 @@
     <EmbeddedResource Include="Forms\ProvisionerForm.resx">
       <DependentUpon>ProvisionerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SaleBranch.resx">
+    <EmbeddedResource Include="Forms\SaleBranch.resx">
       <DependentUpon>SaleBranch.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
@@ -202,6 +205,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

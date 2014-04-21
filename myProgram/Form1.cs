@@ -60,7 +60,7 @@ namespace myProgram
 
         private void btnSale_Click(object sender, EventArgs e)
         {
-            SaleBranch form = new SaleBranch();
+            SaleForms form = new SaleForms();
             form.Show();
         }
     }
