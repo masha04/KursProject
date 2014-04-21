@@ -115,7 +115,7 @@
       <DependentUpon>MerchandiseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Mail.cs" />
-    <Compile Include="Loader.cs" />
+    <Compile Include="Classes\Loader.cs" />
     <Compile Include="MyDataBaseDataSet.cs">
       <DependentUpon>MyDataBaseDataSet.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -139,6 +139,7 @@
     <Compile Include="Forms\SaleBranch.Designer.cs">
       <DependentUpon>SaleBranch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\ReadFromFile.cs" />
     <EmbeddedResource Include="Forms\AddMerchandiseForm.resx">
       <DependentUpon>AddMerchandiseForm.cs</DependentUpon>
     </EmbeddedResource>

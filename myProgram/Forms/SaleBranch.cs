@@ -37,8 +37,8 @@ namespace myProgram
             DataTable dtMerch = ds.Tables["Merchandise"];
             DataTable dtManager = ds.Tables["Manager"];
 
-            Mail mail = new Mail();
-            string[,] listExcel = mail.WorkExcel();
+            ReadFromFile read = new ReadFromFile();
+            string[,] listExcel = read.WorkExcel();
 
             int countRowDgv = saleBindingSource.Count;
 
@@ -50,15 +50,15 @@ namespace myProgram
                     for (int j = 0; j < listExcel.GetLength(1); j++)
                     {
                         if (j == 0)
-                            dgvSale.Rows[i - 1].Cells[j + 1].Value = mail.GetId(dtBranch, "name", listExcel[i, j]);
+                            dgvSale.Rows[i - 1].Cells[j + 1].Value = read.GetId(dtBranch, "name", listExcel[i, j]);
                         else
                         {
                             if (j == 1)
-                                dgvSale.Rows[i - 1].Cells[j + 1].Value = mail.GetId(dtMerch, "name", listExcel[i, j]);
+                                dgvSale.Rows[i - 1].Cells[j + 1].Value = read.GetId(dtMerch, "name", listExcel[i, j]);
                             else
                             {
                                 if (j == 2)
-                                    dgvSale.Rows[i - 1].Cells[j + 1].Value = mail.GetId(dtManager, "fio", listExcel[i, j]);
+                                    dgvSale.Rows[i - 1].Cells[j + 1].Value = read.GetId(dtManager, "fio", listExcel[i, j]);
                                 else
                                     dgvSale.Rows[i - 1].Cells[j + 1].Value = listExcel[i, j];
                             }
@@ -79,15 +79,15 @@ namespace myProgram
                     for (int j = 0; j < listExcel.GetLength(1); j++)
                     {
                         if (j == 0)
-                            dgvSale.Rows[i - 1 + countRowDgv].Cells[j + 1].Value = mail.GetId(dtBranch, "name", listExcel[i, j]);
+                            dgvSale.Rows[i - 1 + countRowDgv].Cells[j + 1].Value = read.GetId(dtBranch, "name", listExcel[i, j]);
                         else
                         {
                             if (j == 1)
-                                dgvSale.Rows[i - 1 + countRowDgv].Cells[j + 1].Value = mail.GetId(dtMerch, "name", listExcel[i, j]);
+                                dgvSale.Rows[i - 1 + countRowDgv].Cells[j + 1].Value = read.GetId(dtMerch, "name", listExcel[i, j]);
                             else
                             {
                                 if (j == 2)
-                                    dgvSale.Rows[i - 1 + countRowDgv].Cells[j + 1].Value = mail.GetId(dtManager, "fio", listExcel[i, j]);
+                                    dgvSale.Rows[i - 1 + countRowDgv].Cells[j + 1].Value = read.GetId(dtManager, "fio", listExcel[i, j]);
                                 else
                                     dgvSale.Rows[i - 1 + countRowDgv].Cells[j + 1].Value = listExcel[i, j];
                             }
