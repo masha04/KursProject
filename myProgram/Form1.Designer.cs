@@ -45,19 +45,15 @@
             this.btnReportMerch = new System.Windows.Forms.Button();
             this.gBStorage = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.branchIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menchIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.storageBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.myDataBaseDataSet = new myProgram.MyDataBaseDataSet();
             this.btnZakMerch = new System.Windows.Forms.Button();
             this.btnPerMerch = new System.Windows.Forms.Button();
             this.cbChooseBranch = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.storageBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.myDataBaseDataSet = new myProgram.MyDataBaseDataSet();
             this.storageTableAdapter = new myProgram.MyDataBaseDataSetTableAdapters.StorageTableAdapter();
+            this.btnPereraspMerch = new System.Windows.Forms.Button();
+            this.btnSale = new System.Windows.Forms.Button();
             this.gBImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEmblem)).BeginInit();
             this.gBmanag.SuspendLayout();
@@ -97,6 +93,7 @@
             // 
             // gBmanag
             // 
+            this.gBmanag.Controls.Add(this.btnSale);
             this.gBmanag.Controls.Add(this.btnMerch);
             this.gBmanag.Controls.Add(this.btnCategory);
             this.gBmanag.Controls.Add(this.btnProvisioner);
@@ -104,7 +101,7 @@
             this.gBmanag.Controls.Add(this.bntBranch);
             this.gBmanag.Location = new System.Drawing.Point(12, 214);
             this.gBmanag.Name = "gBmanag";
-            this.gBmanag.Size = new System.Drawing.Size(205, 171);
+            this.gBmanag.Size = new System.Drawing.Size(205, 199);
             this.gBmanag.TabIndex = 1;
             this.gBmanag.TabStop = false;
             // 
@@ -164,7 +161,7 @@
             this.gBReport.Controls.Add(this.btnReportSale);
             this.gBReport.Controls.Add(this.btnReportProv);
             this.gBReport.Controls.Add(this.btnReportMerch);
-            this.gBReport.Location = new System.Drawing.Point(12, 391);
+            this.gBReport.Location = new System.Drawing.Point(12, 419);
             this.gBReport.Name = "gBReport";
             this.gBReport.Size = new System.Drawing.Size(205, 140);
             this.gBReport.TabIndex = 2;
@@ -208,6 +205,7 @@
             // 
             // gBStorage
             // 
+            this.gBStorage.Controls.Add(this.btnPereraspMerch);
             this.gBStorage.Controls.Add(this.dataGridView1);
             this.gBStorage.Controls.Add(this.btnZakMerch);
             this.gBStorage.Controls.Add(this.btnPerMerch);
@@ -215,7 +213,7 @@
             this.gBStorage.Controls.Add(this.label2);
             this.gBStorage.Location = new System.Drawing.Point(223, 2);
             this.gBStorage.Name = "gBStorage";
-            this.gBStorage.Size = new System.Drawing.Size(668, 529);
+            this.gBStorage.Size = new System.Drawing.Size(668, 557);
             this.gBStorage.TabIndex = 3;
             this.gBStorage.TabStop = false;
             // 
@@ -223,78 +221,17 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.branchIdDataGridViewTextBoxColumn,
-            this.menchIdDataGridViewTextBoxColumn,
-            this.countDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn,
-            this.stateDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.storageBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(6, 46);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(651, 445);
+            this.dataGridView1.Size = new System.Drawing.Size(656, 473);
             this.dataGridView1.TabIndex = 4;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // branchIdDataGridViewTextBoxColumn
-            // 
-            this.branchIdDataGridViewTextBoxColumn.DataPropertyName = "branchId";
-            this.branchIdDataGridViewTextBoxColumn.HeaderText = "Филиал";
-            this.branchIdDataGridViewTextBoxColumn.Name = "branchIdDataGridViewTextBoxColumn";
-            this.branchIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // menchIdDataGridViewTextBoxColumn
-            // 
-            this.menchIdDataGridViewTextBoxColumn.DataPropertyName = "menchId";
-            this.menchIdDataGridViewTextBoxColumn.HeaderText = "Товар";
-            this.menchIdDataGridViewTextBoxColumn.Name = "menchIdDataGridViewTextBoxColumn";
-            this.menchIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // countDataGridViewTextBoxColumn
-            // 
-            this.countDataGridViewTextBoxColumn.DataPropertyName = "count";
-            this.countDataGridViewTextBoxColumn.HeaderText = "Количество";
-            this.countDataGridViewTextBoxColumn.Name = "countDataGridViewTextBoxColumn";
-            this.countDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Цена";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // stateDataGridViewTextBoxColumn
-            // 
-            this.stateDataGridViewTextBoxColumn.DataPropertyName = "state";
-            this.stateDataGridViewTextBoxColumn.HeaderText = "Состояние";
-            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
-            this.stateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // storageBindingSource
-            // 
-            this.storageBindingSource.DataMember = "Storage";
-            this.storageBindingSource.DataSource = this.myDataBaseDataSet;
-            // 
-            // myDataBaseDataSet
-            // 
-            this.myDataBaseDataSet.DataSetName = "MyDataBaseDataSet";
-            this.myDataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnZakMerch
             // 
-            this.btnZakMerch.Location = new System.Drawing.Point(494, 497);
+            this.btnZakMerch.Location = new System.Drawing.Point(499, 525);
             this.btnZakMerch.Name = "btnZakMerch";
             this.btnZakMerch.Size = new System.Drawing.Size(163, 23);
             this.btnZakMerch.TabIndex = 3;
@@ -303,12 +240,10 @@
             // 
             // btnPerMerch
             // 
-            this.btnPerMerch.Location = new System.Drawing.Point(304, 497);
+            this.btnPerMerch.Location = new System.Drawing.Point(0, 0);
             this.btnPerMerch.Name = "btnPerMerch";
-            this.btnPerMerch.Size = new System.Drawing.Size(184, 23);
-            this.btnPerMerch.TabIndex = 2;
-            this.btnPerMerch.Text = "Перераспределить товар";
-            this.btnPerMerch.UseVisualStyleBackColor = true;;
+            this.btnPerMerch.Size = new System.Drawing.Size(75, 23);
+            this.btnPerMerch.TabIndex = 5;
             // 
             // cbChooseBranch
             // 
@@ -329,15 +264,44 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Наличие товара на складе";
             // 
+            // storageBindingSource
+            // 
+            this.storageBindingSource.DataMember = "Storage";
+            this.storageBindingSource.DataSource = this.myDataBaseDataSet;
+            // 
+            // myDataBaseDataSet
+            // 
+            this.myDataBaseDataSet.DataSetName = "MyDataBaseDataSet";
+            this.myDataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // storageTableAdapter
             // 
             this.storageTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnPereraspMerch
+            // 
+            this.btnPereraspMerch.Location = new System.Drawing.Point(330, 525);
+            this.btnPereraspMerch.Name = "btnPereraspMerch";
+            this.btnPereraspMerch.Size = new System.Drawing.Size(163, 23);
+            this.btnPereraspMerch.TabIndex = 6;
+            this.btnPereraspMerch.Text = "Перераспределить товар";
+            this.btnPereraspMerch.UseVisualStyleBackColor = true;
+            // 
+            // btnSale
+            // 
+            this.btnSale.Location = new System.Drawing.Point(7, 167);
+            this.btnSale.Name = "btnSale";
+            this.btnSale.Size = new System.Drawing.Size(188, 23);
+            this.btnSale.TabIndex = 5;
+            this.btnSale.Text = "Список продаж";
+            this.btnSale.UseVisualStyleBackColor = true;
+            this.btnSale.Click += new System.EventHandler(this.btnSale_Click);
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 537);
+            this.ClientSize = new System.Drawing.Size(899, 571);
             this.Controls.Add(this.gBStorage);
             this.Controls.Add(this.gBReport);
             this.Controls.Add(this.gBmanag);
@@ -390,6 +354,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn countDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnSale;
+        private System.Windows.Forms.Button btnPereraspMerch;
     }
 }
 

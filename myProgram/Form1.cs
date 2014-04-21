@@ -57,5 +57,11 @@ namespace myProgram
             Mail mail = new Mail();
             mail.GetAttach(date);            
         }
+
+        private void btnSale_Click(object sender, EventArgs e)
+        {
+            SaleBranch form = new SaleBranch();
+            form.Show();
+        }
     }
 }

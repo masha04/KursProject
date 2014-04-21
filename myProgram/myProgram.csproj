@@ -129,6 +129,12 @@
     <Compile Include="Forms\ProvisionerForm.Designer.cs">
       <DependentUpon>ProvisionerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SaleBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaleBranch.Designer.cs">
+      <DependentUpon>SaleBranch.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\AddMerchandiseForm.resx">
       <DependentUpon>AddMerchandiseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +176,9 @@
     </Compile>
     <EmbeddedResource Include="Forms\ProvisionerForm.resx">
       <DependentUpon>ProvisionerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleBranch.resx">
+      <DependentUpon>SaleBranch.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="MyDataBaseDataSet.xsc">
