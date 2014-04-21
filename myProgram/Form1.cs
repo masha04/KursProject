@@ -54,8 +54,8 @@ namespace myProgram
             this.storageTableAdapter.Fill(this.myDataBaseDataSet.Storage);
 
             DateTime date = DateTime.Now; //Получение текущей даты
-            Mail mail = new Mail();
-            mail.GetAttach(date);            
+            Loader load = new Loader();
+            load.GetAttach(date);            
         }
 
         private void btnSale_Click(object sender, EventArgs e)
