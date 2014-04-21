@@ -21,7 +21,6 @@ namespace myProgram
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "myDataBaseDataSet.Sale". При необходимости она может быть перемещена или удалена.
             this.saleTableAdapter.Fill(this.myDataBaseDataSet.Sale);
-
         }
 
         private void button1_Click(object sender, EventArgs e)

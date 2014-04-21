@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvSale = new System.Windows.Forms.DataGridView();
+            this.btnGetSale = new System.Windows.Forms.Button();
+            this.myDataBaseDataSet = new myProgram.MyDataBaseDataSet();
+            this.saleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.saleTableAdapter = new myProgram.MyDataBaseDataSetTableAdapters.SaleTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.branchIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.merchIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,13 +42,9 @@
             this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.saleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.myDataBaseDataSet = new myProgram.MyDataBaseDataSet();
-            this.saleTableAdapter = new myProgram.MyDataBaseDataSetTableAdapters.SaleTableAdapter();
-            this.btnGetSale = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSale)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.saleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataBaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvSale
@@ -69,6 +69,30 @@
             this.dgvSale.ReadOnly = true;
             this.dgvSale.Size = new System.Drawing.Size(849, 423);
             this.dgvSale.TabIndex = 0;
+            // 
+            // btnGetSale
+            // 
+            this.btnGetSale.Location = new System.Drawing.Point(12, 12);
+            this.btnGetSale.Name = "btnGetSale";
+            this.btnGetSale.Size = new System.Drawing.Size(166, 23);
+            this.btnGetSale.TabIndex = 1;
+            this.btnGetSale.Text = "Получить список продаж";
+            this.btnGetSale.UseVisualStyleBackColor = true;
+            this.btnGetSale.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // myDataBaseDataSet
+            // 
+            this.myDataBaseDataSet.DataSetName = "MyDataBaseDataSet";
+            this.myDataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // saleBindingSource
+            // 
+            this.saleBindingSource.DataMember = "Sale";
+            this.saleBindingSource.DataSource = this.myDataBaseDataSet;
+            // 
+            // saleTableAdapter
+            // 
+            this.saleTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -126,30 +150,6 @@
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
             this.priceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // saleBindingSource
-            // 
-            this.saleBindingSource.DataMember = "Sale";
-            this.saleBindingSource.DataSource = this.myDataBaseDataSet;
-            // 
-            // myDataBaseDataSet
-            // 
-            this.myDataBaseDataSet.DataSetName = "MyDataBaseDataSet";
-            this.myDataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // saleTableAdapter
-            // 
-            this.saleTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnGetSale
-            // 
-            this.btnGetSale.Location = new System.Drawing.Point(12, 12);
-            this.btnGetSale.Name = "btnGetSale";
-            this.btnGetSale.Size = new System.Drawing.Size(166, 23);
-            this.btnGetSale.TabIndex = 1;
-            this.btnGetSale.Text = "Получить список продаж";
-            this.btnGetSale.UseVisualStyleBackColor = true;
-            this.btnGetSale.Click += new System.EventHandler(this.button1_Click);
-            // 
             // SaleForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,14 +161,19 @@
             this.Text = "Список продаж";
             this.Load += new System.EventHandler(this.SaleBranch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSale)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.saleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataBaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saleBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        public System.Windows.Forms.DataGridView dgvSale;
+        private System.Windows.Forms.Button btnGetSale;
+        private MyDataBaseDataSet myDataBaseDataSet;
+        private System.Windows.Forms.BindingSource saleBindingSource;
+        private MyDataBaseDataSetTableAdapters.SaleTableAdapter saleTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn branchIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn merchIdDataGridViewTextBoxColumn;
@@ -177,10 +182,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn countDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        public System.Windows.Forms.DataGridView dgvSale;
-        public MyDataBaseDataSet myDataBaseDataSet;
-        public System.Windows.Forms.BindingSource saleBindingSource;
-        public MyDataBaseDataSetTableAdapters.SaleTableAdapter saleTableAdapter;
-        private System.Windows.Forms.Button btnGetSale;
     }
 }
