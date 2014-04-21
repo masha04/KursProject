@@ -19,10 +19,16 @@ namespace myProgram
             string s = @"Data Source=.\SQLEXPRESS;AttachDbFilename=D:\MyDataBase.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
             DataSet ds = new DataSet();
             SqlDataAdapter daBranch = new SqlDataAdapter("Select * from Branch", s);
+            SqlDataAdapter daProv = new SqlDataAdapter("Select * from Provisioner", s);
             daBranch.Fill(ds, "Branch");
+            daProv.Fill(ds, "Provisioner");
             DataTable dtBranch = ds.Tables["Branch"];
+            DataTable dtProv = ds.Tables["Provisioner"];
 
             var emailBrach = dtBranch.AsEnumerable()
+                        .Select(t => t.Field<string>("email"));
+
+            var emailProv = dtProv.AsEnumerable()
                         .Select(t => t.Field<string>("email"));
 
             using (Pop3Client client = new Pop3Client())
@@ -49,6 +55,20 @@ namespace myProgram
                                 foreach (MessagePart attach in listAttach)
                                 {
                                     string filePath = Path.Combine(@"D:\MailBranch", attach.FileName);
+                                    attach.Save(new FileInfo(filePath));
+                                }
+                            }
+                        }
+                    }
+                    foreach (var elem in emailProv)
+                    {
+                        if (address.Substring(0, address.Length) == elem && dateMsg.ToString().Substring(0, 10) == date.ToString().Substring(0, 10))
+                        {
+                            if (listAttach.Count > 0)
+                            {
+                                foreach (MessagePart attach in listAttach)
+                                {
+                                    string filePath = Path.Combine(@"D:\MailProvisioner", attach.FileName);
                                     attach.Save(new FileInfo(filePath));
                                 }
                             }
